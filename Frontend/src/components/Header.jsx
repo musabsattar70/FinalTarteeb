@@ -16,7 +16,7 @@ export const Header = () => {
                 <div className="nav_links">
                     <span>
                         <Link
-                            to={PAGE_ROUTES.PROFILE + "/1"}
+                            to={PAGE_ROUTES.PROFILE + "/2"}
                             className={
                                 "/" + location.pathname.split("/")[1] ==
                                 PAGE_ROUTES.PROFILE

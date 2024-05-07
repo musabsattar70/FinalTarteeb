@@ -2,7 +2,7 @@ const app = require("./app");
 const commonConfig = require("./Config/appsettings.json");
 
 // Define the port
-const PORT = proces.env.PORT || 7075;
+const PORT = process.env.PORT || 7075;
 
 // Start the server
 const server = app.listen(PORT, () => {

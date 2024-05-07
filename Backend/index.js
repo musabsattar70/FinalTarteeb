@@ -2,16 +2,16 @@ const app = require("./app");
 const commonConfig = require("./Config/appsettings.json");
 
 // Define the port
-const PORT = commonConfig.port || 5000;
+const PORT = proces.env.PORT || 7075;
 
 // Start the server
 const server = app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+  console.log(`Server is running on port ${PORT}`);
 });
 
 // Handle unhandled promise rejections
 process.on("unhandledRejection", (err, promise) => {
-    console.error(`Error: ${err.message}`);
-    // Close server and exit process
-    server.close(() => process.exit(1));
+  console.error(`Error: ${err.message}`);
+  // Close server and exit process
+  server.close(() => process.exit(1));
 });

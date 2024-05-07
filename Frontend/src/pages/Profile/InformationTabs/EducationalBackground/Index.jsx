@@ -13,7 +13,7 @@ export const EducationalBackground = () => {
     const fetchDegreeList = async () => {
         // Fetch degreeList from the API
         const response = await fetch(
-            "http://localhost:7075/api/educational-background/" + id
+            import.meta.env.VITE_API_URL + "/api/educational-background/" + id
         );
         const data = await response.json();
         setDegreeListState(data.Data);
@@ -57,7 +57,7 @@ export const EducationalBackground = () => {
         // }
 
         const response = await fetch(
-            "http://localhost:7075/api/educational-background",
+            import.meta.env.VITE_API_URL + "/api/educational-background",
             {
                 method: "PUT",
                 headers: {
@@ -91,7 +91,7 @@ export const EducationalBackground = () => {
         // setDegreeListState(degreeListStateCopy);
 
         const response = await fetch(
-            "http://localhost:7075/api/educational-background/" + index,
+            import.meta.env.VITE_API_URL + "/api/educational-background/" + index,
             {
                 method: "DELETE",
             }
@@ -116,7 +116,7 @@ export const EducationalBackground = () => {
         const graduationDate = document.getElementById("graduation_date").value;
 
         const response = await fetch(
-            "http://localhost:7075/api/educational-background",
+            import.meta.env.VITE_API_URL + "/api/educational-background",
             {
                 method: "POST",
                 headers: {

@@ -1,0 +1,18 @@
+INSERT INTO [Admin]
+      ([Email]
+	  ,[Password]
+      ,[FirstName]
+      ,[LastName]
+      ,[Nationality]
+      ,[CNIC]
+      ,[PECNo]
+      ,[PhoneNumber]
+      ,[JoiningDate]
+      ,[FacultyType]
+      ,[ProfileImagePath]
+      ,[School]
+      ,[Program]
+      ,[Gender]
+      ,[DateOfBirth]
+      ,[RoleId])
+VALUES ('system.admin@habib.edu.pk', HASHBYTES('SHA2_256', 'admin123'), 'System', 'Admin', 'PK', '420529511', '2382309', '03319087632', '2011-01-01', 'Full-Time', '/admin.jpg', '-', '-', 'Male', '1989-01-01', 2);

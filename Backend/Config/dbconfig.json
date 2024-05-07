@@ -1,0 +1,8 @@
+{
+    "development": {
+        "URI": "localhost",
+        "USER": "sa",
+        "PASSWORD": "sa123",
+        "DB": "Tarteeb"
+    }
+}

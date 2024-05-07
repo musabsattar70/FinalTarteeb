@@ -1,0 +1,938 @@
+{
+	"info": {
+		"_postman_id": "95b4a877-bf84-42dd-8e28-9317653a3989",
+		"name": "Tar****",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33966758"
+	},
+	"item": [
+		{
+			"name": "Reports",
+			"item": [
+				{
+					"name": "FullReport",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Instructors\": [\r\n        5\r\n    ],\r\n    \"ReportType\": {\r\n        \"Title\": \"Full Report\",\r\n        \"SubCategories\": [\r\n            \"Name of Faculty Member\",\r\n            \"Gender\",\r\n            \"CNIC No\",\r\n            \"Passport No\",\r\n            \"Email\",\r\n            \"Cell No\",\r\n            \"Nationality (Country Name)\",\r\n            \"Current Actual Designation\",\r\n            \"Additional Charge\",\r\n            \"Highest Degree Level\",\r\n            \"Highest Degree Name\",\r\n            \"Year of completion of Highest Degree\",\r\n            \"Subject of Specialization of Highest Degree\",\r\n            \"Highest Degree Awarded by University\",\r\n            \"Country from Which Highest Degree obtained\",\r\n            \"Total Teaching and Research Experience\",\r\n            \"Faculty Type\",\r\n            \"Date of Birth\",\r\n            \"Date of Joining\",\r\n            \"Working Status During FY 2021-22\"\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{WebAPI}}/api/reports/GenerateReport",
+							"host": [
+								"{{WebAPI}}"
+							],
+							"path": [
+								"api",
+								"reports",
+								"GenerateReport"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Publications",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Instructors\": [\r\n        1033,1034,1035,1036,1037\r\n    ],\r\n    \"ReportType\": {\r\n        \"Title\": \"Publications\",\r\n        \"SubCategories\": [\r\n            \"Author Name\",\r\n            \"Publication Title\",\r\n            \"Publication Date\",\r\n            \"Publication Link\",\r\n            \"Publication Type\"\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{WebAPI}}/api/reports/GenerateReport",
+							"host": [
+								"{{WebAPI}}"
+							],
+							"path": [
+								"api",
+								"reports",
+								"GenerateReport"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ServiceHistory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Instructors\": [\r\n        1,2,3,4,5,6,7,8,9,10,11,12,13\r\n    ],\r\n    \"ReportType\": {\r\n        \"Title\": \"Service History\",\r\n        \"SubCategories\": [\r\n            \"Committiee Membership\",\r\n            \"Staff Appointment\",\r\n            \"Club Patronage\"\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{WebAPI}}/api/reports/GenerateReport",
+							"host": [
+								"{{WebAPI}}"
+							],
+							"path": [
+								"api",
+								"reports",
+								"GenerateReport"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FullTimeDepartmentalFaculty",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Instructors\": [\r\n        5,\r\n        3\r\n    ],\r\n    \"ReportType\": {\r\n        \"Title\": \"List of Full-Time Departmental Teaching Faculty\",\r\n        \"SubCategories\": [\r\n            \"Name\",\r\n            \"PEC #\",\r\n            \"Designation\",\r\n            \"Joining Date\",\r\n            \"Details of Qualifications\",\r\n            \"Specialization\",\r\n            \"Experience Teaching (yrs)\",\r\n            \"Experience Total (yrs)\",\r\n            \"Dedicated/Shared\",\r\n            \"Courses taught in Spring 2023\",\r\n            \"Courses taught in Fall 2023\"\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{WebAPI}}/api/reports/GenerateReport",
+							"host": [
+								"{{WebAPI}}"
+							],
+							"path": [
+								"api",
+								"reports",
+								"GenerateReport"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListFacultyMembers",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Instructors\": [\r\n        5,\r\n        3\r\n    ],\r\n    \"ReportType\": {\r\n        \"Title\": \"List the Faculty Members\",\r\n        \"SubCategories\": [  \r\n            \"Name\",\r\n            \"Degree Level\",\r\n            \"Current Semester Loading Fall 2023\",\r\n            \"Last Semester Loading Spring 2023\"\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{WebAPI}}/api/reports/GenerateReport",
+							"host": [
+								"{{WebAPI}}"
+							],
+							"path": [
+								"api",
+								"reports",
+								"GenerateReport"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetInstructorsList",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Instructors\": [\r\n        5,\r\n        3\r\n    ],\r\n    \"ReportType\": {\r\n        \"Title\": \"List the Faculty Members\",\r\n        \"SubCategories\": [  \r\n            \"Name\",\r\n            \"Degree Level\",\r\n            \"Current Semester Loading Fall 2023\",\r\n            \"Last Semester Loading Spring 2023\"\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{WebAPI}}/api/reports/GetInstructorsList",
+							"host": [
+								"{{WebAPI}}"
+							],
+							"path": [
+								"api",
+								"reports",
+								"GetInstructorsList"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ProfileImage",
+			"item": [
+				{
+					"name": "GetProfileImage",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{WebAPI}}/api/images/abdul.jpg",
+							"host": [
+								"{{WebAPI}}"
+							],
+							"path": [
+								"api",
+								"images",
+								"abdul.jpg"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UploadProfileImage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{WebAPI}}/api/media/upload/1",
+							"host": [
+								"{{WebAPI}}"
+							],
+							"path": [
+								"api",
+								"media",
+								"upload",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "GetAdminInfo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{WebAPI}}/api/admin/GetAdminInfo/13",
+							"host": [
+								"{{WebAPI}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"GetAdminInfo",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateAdminInfo",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 13,\r\n    \"firstName\": \"John\",\r\n    \"lastName\": \"Doe\",\r\n    \"nationality\": \"American\",\r\n    \"cnic\": \"1234567890123\",\r\n    \"pecNo\": \"1010123\",\r\n    \"phoneNumber\": \"123-456-7890\",\r\n    \"joiningDate\": \"2024-01-01\",\r\n    \"facultyType\": \"On-Leave\",\r\n    \"school\": \"DSSE\",\r\n    \"program\": \"CYS\",\r\n    \"gender\": \"Male\",\r\n    \"dateOfBirth\": \"1990-01-01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{WebAPI}}/api/admin/UpdateAdminInfo",
+							"host": [
+								"{{WebAPI}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"UpdateAdminInfo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllAdminInfo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"programFilter\": \"\",\r\n    \"designationFilter\": \"Vice President\",\r\n    \"facultyTypeFilter\": \"Full-Time\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{WebAPI}}/api/admin/GetAllAdminInfo",
+							"host": [
+								"{{WebAPI}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"GetAllAdminInfo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"qasim.pasta@habib.edu.pk\",\r\n    \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{WebAPI}}/api/admin/LoginAdmin",
+							"host": [
+								"{{WebAPI}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"LoginAdmin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "EducationalBackground",
+			"item": [
+				{
+					"name": "GetEducationBackground",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{WebAPI}}/api/educational-background/2",
+							"host": [
+								"{{WebAPI}}"
+							],
+							"path": [
+								"api",
+								"educational-background",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddEducationBackground",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 2,\r\n    \"degreeTitle\": \"Ph. D\",\r\n    \"specialization\": \"MicroController Interface Design\",\r\n    \"university\": \"University of California\",\r\n    \"countryOfUniversity\": \"USA\",\r\n    \"dateOfGraduation\":\"04-01-2003\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{WebAPI}}/api/educational-background/",
+							"host": [
+								"{{WebAPI}}"
+							],
+							"path": [
+								"api",
+								"educational-background",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateEducationBackground",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"educationalBackgroundId\": 15,\r\n    \"degreeTitle\": \"Ph. DD\",\r\n    \"specialization\": \"MicroController Interface DesignD\",\r\n    \"university\": \"University of CaliforniaD\",\r\n    \"countryOfUniversity\": \"USAD\",\r\n    \"dateOfGraduation\":\"04-01-2004\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{WebAPI}}/api/educational-background/",
+							"host": [
+								"{{WebAPI}}"
+							],
+							"path": [
+								"api",
+								"educational-background",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteEducationBackground",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{WebAPI}}/api/educational-background/19",
+							"host": [
+								"{{WebAPI}}"
+							],
+							"path": [
+								"api",
+								"educational-background",
+								"19"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TeachingHistory",
+			"item": [
+				{
+					"name": "GetTeachingHistory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{WebAPI}}/api/teaching-history/2",
+							"host": [
+								"{{WebAPI}}"
+							],
+							"path": [
+								"api",
+								"teaching-history",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddTeachingHistory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 2,\r\n    \"courseName\": \"Data Structures and Algorithms\",\r\n    \"creditHours\": 3,\r\n    \"courseNo\": \"CS201\",\r\n    \"semesterName\": \"Spring 2024\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{WebAPI}}/api/teaching-history/",
+							"host": [
+								"{{WebAPI}}"
+							],
+							"path": [
+								"api",
+								"teaching-history",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateTeachingHistory",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"teachingHistoryId\": 13,\r\n    \"courseName\": \"Graph Data Science\",\r\n    \"creditHours\": 4,\r\n    \"courseNo\": \"CS420\",\r\n    \"semesterName\": \"Spring 2023\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{WebAPI}}/api/teaching-history/",
+							"host": [
+								"{{WebAPI}}"
+							],
+							"path": [
+								"api",
+								"teaching-history",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteTeachingHistory",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{WebAPI}}/api/teaching-history/13",
+							"host": [
+								"{{WebAPI}}"
+							],
+							"path": [
+								"api",
+								"teaching-history",
+								"13"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "StaffAppointment",
+			"item": [
+				{
+					"name": "GetStaffAppointment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{WebAPI}}/api/staff-appointment/2",
+							"host": [
+								"{{WebAPI}}"
+							],
+							"path": [
+								"api",
+								"staff-appointment",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddStaffAppointment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 2,\r\n    \"designation\": \"Associate RA\",\r\n    \"termFrom\": \"Fall 2017\",\r\n    \"termTo\": \"Spring 2018\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{WebAPI}}/api/staff-appointment/",
+							"host": [
+								"{{WebAPI}}"
+							],
+							"path": [
+								"api",
+								"staff-appointment",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateStaffAppointment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"staffAppointmentId\": 2,\r\n    \"designation\": \"Associate Dean\",\r\n    \"termFrom\": \"Fall 2023\",\r\n    \"termTo\": \"Spring 2024\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{WebAPI}}/api/staff-appointment/",
+							"host": [
+								"{{WebAPI}}"
+							],
+							"path": [
+								"api",
+								"staff-appointment",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteStaffAppointment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{WebAPI}}/api/staff-appointment/1021",
+							"host": [
+								"{{WebAPI}}"
+							],
+							"path": [
+								"api",
+								"staff-appointment",
+								"1021"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AttendedConferences",
+			"item": [
+				{
+					"name": "AttendedConferences",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{WebAPI}}/api/attended-conferences/2",
+							"host": [
+								"{{WebAPI}}"
+							],
+							"path": [
+								"api",
+								"attended-conferences",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AttendedConferences",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 2,\r\n    \"title\": \"abc\",\r\n    \"date\": \"2024-01-01\",\r\n    \"sourceOfFunding\": \"University Fund\",\r\n    \"reason\": \"To present findings on algorithmic efficiency\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{WebAPI}}/api/attended-conferences/",
+							"host": [
+								"{{WebAPI}}"
+							],
+							"path": [
+								"api",
+								"attended-conferences",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AttendedConferences",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"attendedConferencesId\": 17,\r\n    \"title\": \"International Algorithms Conference\",\r\n    \"date\": \"2023-12-20T00:00:00.000Z\",\r\n    \"sourceOfFunding\": \"University Fund\",\r\n    \"reason\": \"To present findings on algorithmic efficiency\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{WebAPI}}/api/attended-conferences/",
+							"host": [
+								"{{WebAPI}}"
+							],
+							"path": [
+								"api",
+								"attended-conferences",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AttendedConferences",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{WebAPI}}/api/attended-conferences/17",
+							"host": [
+								"{{WebAPI}}"
+							],
+							"path": [
+								"api",
+								"attended-conferences",
+								"17"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ClubPatronage",
+			"item": [
+				{
+					"name": "ClubPatronage",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{WebAPI}}/api/club-patronage/2",
+							"host": [
+								"{{WebAPI}}"
+							],
+							"path": [
+								"api",
+								"club-patronage",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ClubPatronage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 2,\r\n    \"clubName\": \"Azure Club\",\r\n    \"termFrom\": \"Fall 2021\",\r\n    \"termTo\": \"Spring 2021\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{WebAPI}}/api/club-patronage/",
+							"host": [
+								"{{WebAPI}}"
+							],
+							"path": [
+								"api",
+								"club-patronage",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ClubPatronage",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clubPatronageId\": 16,\r\n    \"clubName\": \"Azure DevOps Group\",\r\n    \"termFrom\": \"Fall 2022\",\r\n    \"termTo\": \"Spring 2023\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{WebAPI}}/api/club-patronage/",
+							"host": [
+								"{{WebAPI}}"
+							],
+							"path": [
+								"api",
+								"club-patronage",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ClubPatronage",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{WebAPI}}/api/club-patronage/16",
+							"host": [
+								"{{WebAPI}}"
+							],
+							"path": [
+								"api",
+								"club-patronage",
+								"16"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CommitteeMembership",
+			"item": [
+				{
+					"name": "CommitteeMembership",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{WebAPI}}/api/committee-membership/2",
+							"host": [
+								"{{WebAPI}}"
+							],
+							"path": [
+								"api",
+								"committee-membership",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CommitteeMembership",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 2,\r\n    \"committeeName\": \"Faculty SenateS\",\r\n    \"designation\": \"ChairpersonS\",\r\n    \"termFrom\": \"Fall 2021\",\r\n    \"termTo\": \"Spring 2023\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{WebAPI}}/api/committee-membership/",
+							"host": [
+								"{{WebAPI}}"
+							],
+							"path": [
+								"api",
+								"committee-membership",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CommitteeMembership",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"committeeMembershipId\": 2,\r\n    \"committeeName\": \"Faculty SenateS\",\r\n    \"designation\": \"ChairpersonS\",\r\n    \"termFrom\": \"Fall 2021\",\r\n    \"termTo\": \"Spring 2023\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{WebAPI}}/api/committee-membership",
+							"host": [
+								"{{WebAPI}}"
+							],
+							"path": [
+								"api",
+								"committee-membership"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CommitteeMembership",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{WebAPI}}/api/committee-membership/16",
+							"host": [
+								"{{WebAPI}}"
+							],
+							"path": [
+								"api",
+								"committee-membership",
+								"16"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "WebAPI",
+			"value": "http://localhost:7075"
+		}
+	]
+}

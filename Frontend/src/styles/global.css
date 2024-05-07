@@ -1,0 +1,1068 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins&family=Satisfy&display=swap');
+
+:root {
+    --habib-purple: #5c2568;
+    --light-gray: #D9D9D9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: #232b2b;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    width: 100%;
+}
+
+/*************************
+* *  Login Componenet  * *
+*************************/
+
+.login_section {
+    width: 100vw;
+    height: 100vh;
+    background: url("../assets/LoginBackground.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.login_sidebar {
+    height: 100vh;
+    width: 400px;
+    background: rgba(255, 255, 255, 0.4);
+    display: flex;
+    justify-content: center;
+}
+
+.login_component {
+    width: 100%;
+}
+
+.login_component img {
+    width: 400px;
+    margin: 0 auto;
+    display: block;
+}
+
+.login_component form h1 {
+    text-align: center;
+    width: 100%;
+    font-size: 3rem;
+}
+
+.input_wrapper {
+    margin: 1rem auto;
+}
+
+.login_component form input[type="text"],
+.login_component form input[type="password"] {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    outline: none;
+    border-radius: 1rem;
+    border: none;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.login_component form input[type="text"]::placeholder,
+.login_component form input[type="password"]::placeholder {
+    color: black;
+}
+
+.login_component form span {
+    display: block;
+    width: 90%;
+    text-align: right;
+}
+
+.login_component form input[type="submit"] {
+    width: 80%;
+    display: block;
+    margin: 2rem auto;
+    outline: none;
+    border-radius: 1rem;
+    border: none;
+    padding: 1rem;
+    background: var(--habib-purple);
+    color: white;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+/* Header */
+
+.header_wrapper {
+    width: 100%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #f8f9fa;
+    height: 12rem;
+    width: 100%;
+}
+
+.nav_logo,
+.nav_links,
+.nav_side {
+    display: inline-block;
+}
+
+.nav_logo {
+    width: 25%;
+    display: inline-block;
+    line-height: 12rem;
+    text-align: center;
+}
+
+.nav_logo img {
+    max-width: 70%;
+    vertical-align: middle;
+    display: inline-block !important;
+    margin: 0 auto !important;
+}
+
+.nav_links {
+    width: 50%;
+    text-align: center;
+}
+
+.nav_links span {
+    display: inline-block;
+    width: 25%;
+    font-size: 2rem;
+}
+
+.nav_links span a {
+    text-decoration: none;
+    transition: 100ms linear all;
+    font-weight: bold;
+}
+
+.nav_links span:hover a,
+.nav_links span:hover i,
+.active_link {
+    color: var(--habib-purple);
+}
+
+.nav_links span:hover a,
+.active_link {
+    border-bottom: .3rem solid var(--habib-purple);
+}
+
+.nav_side {
+    width: 25%;
+    text-align: center;
+}
+
+.nav_side button {
+    background: var(--light-gray);
+    outline: none;
+    border: none;
+    font-weight: bold;
+    padding: .8rem 2rem;
+    border-radius: 1rem;
+    font-size: 2rem;
+    transition: 100ms linear all;
+}
+
+.nav_side button:hover {
+    background: var(--habib-purple);
+    color: white;
+    cursor: pointer;
+}
+
+.nav_side button:hover i {
+    color: white;
+}
+
+/* Main Body - Actual Content */
+
+main {
+    width: 100%;
+    min-height: calc(100vh - 12rem);
+    padding: 2rem 5rem;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+/* Custom Select Filter */
+
+.custom_select {
+    position: relative;
+    width: 100%;
+}
+
+.custom_select input {
+    width: 100%;
+    background: var(--light-gray);
+    outline: none;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    font-weight: bold;
+}
+
+.custom_select i {
+    position: absolute;
+    font-size: 2rem;
+    background: var(--habib-purple);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 50%;
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    text-align: center;
+    top: -.5rem;
+    right: -2rem;
+    cursor: pointer;
+}
+
+.custom_select_options_list {
+    width: 100%;
+    background: #f8f9fa;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    overflow: hidden;
+    border-radius: 1rem;
+    position: absolute;
+    max-height: 20rem;
+    overflow-y: auto;
+    z-index: 10;
+}
+
+.custom_select_options_list div {
+    padding: 1rem 1rem 1rem 2rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: 200ms linear all;
+}
+
+.custom_select_options_list div:hover,
+.custom_select_options_list_selected {
+    background: #5c2568;
+    color: white;
+}
+
+/* Filters div wrapper */
+
+.search_filters_wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+
+
+/* Faculty Designation Filter */
+
+.faculty_designation_filter {
+    width: 25%;
+}
+
+/* Aplhabets Name Filter */
+
+.alphabet_names {
+    padding: 2rem;
+    text-align: center;
+}
+
+.alphabet_names span {
+    display: inline-block;
+    font-size: 1.6rem;
+    background: var(--light-gray);
+    color: #232b2b;
+    border-radius: 50%;
+    margin: .5rem;
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: 200ms linear all;
+}
+
+.alphabet_names span:hover,
+.active_alphabet {
+    background: var(--habib-purple) !important;
+    color: white !important;
+}
+
+/* Dashboard - Instructors List */
+
+.instructor_wrapper {
+
+    text-align: center;
+}
+
+.instructor {
+    display: inline-block;
+    text-align: center;
+    margin: 2rem;
+    cursor: pointer;
+    padding: 1rem;
+    transition: 100ms linear all;
+    width: 20rem;
+    height: 30rem;
+    vertical-align: middle;
+}
+
+.instructor:hover {
+    background: var(--light-gray);
+    border-radius: 1rem;
+}
+
+.instructor img {
+    display: block;
+    margin: 0 auto;
+    width: 18rem;
+    height: 23rem;
+    border-radius: 1rem;
+}
+
+.instructor span {
+    font-weight: bold;
+    font-size: 1.6rem;
+    display: block;
+    margin: 1rem auto;
+}
+
+.instructorAddAdmin {
+    display: inline-block;
+    text-align: center;
+    margin: 2rem;
+    cursor: pointer;
+    padding: 1rem;
+    transition: 100ms linear all;
+    width: 20rem;
+    height: 20rem;
+    line-height: 18rem;
+    font-size: 8rem;
+    background: var(--light-gray);
+    border-radius: 1rem;
+}
+
+/*************************
+* *  My Profile  * *
+*************************/
+
+.my_profile_section_main {
+    display: flex;
+    justify-content: center;
+}
+
+.profile_information {
+    width: 30%;
+    padding: 1rem;
+    font-size: 1.4rem;
+    display: inline-block;
+}
+
+.profile_information_image,
+.profile_information_details {
+    display: block;
+    margin: 1rem auto;
+}
+
+.profile_information_image {
+    margin-top: 0;
+}
+
+.profile_information_image span {
+    display: block;
+    font-weight: bold;
+}
+
+.profile_information_image_wrapper {
+    max-width: 25rem;
+    width: 100%;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.profile_information_image_wrapper i {
+    position: absolute;
+    bottom: 0;
+    background: var(--light-gray);
+    padding: 1.3rem;
+    border-radius: 50%;
+    right: -1rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    border: .1rem solid gray;
+    transition: 100ms linear all;
+}
+
+.profile_information_image_wrapper i:hover {
+    background: var(--habib-purple);
+    color: white;
+    border-color: var(--habib-purple);
+}
+
+.profile_information_image img {
+    width: 100%;
+    border-radius: 1rem;
+    border: .3rem solid lightgray;
+    max-width: 25rem;
+    margin: 0 auto;
+}
+
+.profile_information_details span {
+    display: block;
+    word-break: break-all;
+}
+
+.profile_information_details span b {
+    font-weight: bold;
+    color: rgb(128, 128, 128);
+}
+
+/* Profile Information Tabs */
+
+.information_tabs {
+    width: 70%;
+    display: inline-block;
+}
+
+.tabs {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tabs span {
+    text-align: center;
+    border: .2rem solid gray;
+    border-right: none;
+    font-size: 1.3rem;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: bold;
+    padding: .5rem 1rem;
+    background: var(--light-gray);
+    border-radius: 1rem 1rem 0 0;
+    border-bottom: none;
+    transition: 100ms linear all;
+}
+
+.tabs span:hover,
+.active_tab {
+    color: white;
+    background: var(--habib-purple) !important;
+    border-color: var(--habib-purple) !important;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.tabs span:last-child {
+    border-right: .2rem solid gray;
+}
+
+
+/* Profile Information Tab Details */
+
+.information_tab_details {
+    width: 100%;
+    background: var(--habib-purple);
+    border-radius: 0rem 0rem 1rem 1rem;
+    padding: 3rem;
+}
+
+.personal_details_input_wrapper {
+    width: 100%;
+    padding: .8rem;
+    background: rgba(217, 217, 217, 0.5);
+    border-radius: 1rem;
+    margin: .5rem auto;
+    font-size: 1.6rem;
+
+}
+
+.personal_details_input_wrapper input,
+.personal_details_input_wrapper textarea {
+    outline: none;
+    border: none;
+    padding: .5rem 1rem;
+    margin-left: 1rem;
+    font-weight: bold;
+    border-radius: .5rem;
+}
+
+
+.personal_details_input_wrapper p,
+.personal_details_input_wrapper label {
+    display: inline-block;
+    padding-left: 1rem;
+    color: black !important;
+
+}
+
+.personal_details_input_wrapper p {
+    font-weight: bold;
+}
+
+.personal_details_edit_wrapper {
+    text-align: right;
+}
+
+.personal_details_edit {
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    padding: 1rem;
+    background: rgba(217, 217, 217, 0.5);
+    color: black !important;
+    width: 4rem;
+    height: 4rem;
+    cursor: pointer;
+    transition: 200ms linear all;
+    display: inline-block;
+    margin: .5rem;
+}
+
+.personal_details_edit:hover {
+    background: white;
+}
+
+.personal_details_edit i {
+    color: black !important;
+}
+
+
+
+/* Education Background */
+
+.instructor_degree {
+
+    background: rgba(217, 217, 217, 0.5);
+    font-size: 1.6rem;
+    padding: 2rem;
+    margin: 1rem auto;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.instructor_degree span {
+    display: block;
+    z-index: 10 !important;
+    position: relative;
+}
+
+.instructor_degree span,
+.instructor_degree span b {
+    color: black !important;
+}
+
+.instructor_degree_icon {
+    font-size: 8rem;
+    position: absolute;
+    z-index: 0 !important;
+    right: 4rem;
+    bottom: -.5rem;
+    color: #D9D9D9
+}
+
+.instructor_degree_edit_icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    color: black;
+    background: #D9D9D9;
+    padding: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.instructor_degree_edit_icon:hover {
+    background: white;
+}
+
+.instructor_degree_trash_icon {
+    position: absolute;
+    top: 4rem;
+    right: 0rem;
+    z-index: 10;
+    color: black;
+    background: #D9D9D9;
+    padding: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.instructor_degree_trash_icon:hover {
+    background: white;
+}
+
+/* Histroy At HU */
+
+.courses_taught {
+    margin-top: 3rem;
+}
+
+.courses_taught h1 {
+    font-size: 2rem;
+    color: white;
+}
+
+.courses_taught h2 {
+    font-size: 1.6rem;
+    color: white;
+    margin-top: 3rem;
+}
+
+.courses_taught h2 i {
+    transform: rotate(90deg);
+    transition: 200ms linear all;
+    display: inline-block;
+    margin-right: 1rem;
+    color: white;
+    margin-left: 3rem !important;
+
+}
+
+.rotate {
+    transition: transform 0.3s ease, background 0.3s ease !important;
+    transform: rotate(180deg) !important;
+}
+
+.hide_on_init {
+    display: none;
+
+}
+
+.show_courses {
+    display: block;
+    height: 100%;
+}
+
+
+.courses_taught h2 i:hover {
+    cursor: pointer;
+    color: black;
+}
+
+/* Service History */
+
+#custom_semester_select_under_tab {
+
+    max-width: 20rem !important;
+    display: inline-block;
+}
+
+#custom_semester_select_under_tab input {
+    background: white;
+
+}
+
+#custom_semester_select_under_tab i {
+    width: 4rem;
+    height: 4rem;
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+
+/* Service History Tabs */
+
+.service_history {
+
+    margin-top: 3rem;
+}
+
+.service_history_tabs {
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.service_history_tabs span {
+    background: rgba(217, 217, 217, 0.5);
+    padding: 1rem;
+    width: 33%;
+    display: inline-block;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    border-right: 1px solid #232b2b;
+    cursor: pointer;
+    transition: 100ms linear all;
+}
+
+.service_history_tabs span:hover,
+.active_service_history_tab {
+    background: yellow !important;
+    color: black !important;
+
+}
+
+/* Service History Tab Components */
+
+.service_history_tab_components {
+
+    background: rgba(217, 217, 217, 0.5);
+    margin-top: 1rem;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+/* Tabs Inside Tabs of Service Histor */
+
+.service_history_tab_components_tabs {
+    text-align: center;
+}
+
+.service_history_tab_components_tabs span {
+    width: 33%;
+    display: inline-block;
+    padding: 1rem;
+    font-size: 1.4rem;
+    font-weight: bolder;
+    border-bottom: 2px solid transparent;
+}
+
+.service_history_tab_components_tabs span b {
+    color: black;
+}
+
+.service_history_tab_components_tabs span b:hover,
+.active_tab_inside_tabs {
+    cursor: pointer;
+    border-bottom: 2px solid black;
+}
+
+
+/* Commmunity Service */
+
+.community_serivce_date {
+    font-size: 1.2rem;
+    margin: 1rem;
+}
+
+.community_serivce_description {
+    font-size: 1.3rem;
+}
+
+.personal_details_input_wrapper textarea {
+    width: 90%;
+    margin-top: 2rem;
+    height: 10rem;
+}
+
+/* Download Report Button */
+
+.downloadReportButtonProfile {
+    background: var(--light-gray);
+    outline: none;
+    border-radius: 10rem;
+    font-size: 1.4rem;
+    padding: 1rem 3rem;
+    border: none;
+}
+
+.downloadReportButtonProfile:hover i,
+.downloadReportButtonProfile:hover {
+    background: var(--habib-purple);
+    color: white;
+    cursor: pointer;
+}
+
+/* Download Report Modal */
+
+.downloadReportModalBlur {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(1rem);
+    z-index: 11;
+    background: transparent;
+}
+
+
+
+.downloadReportModal {
+    position: fixed;
+    width: 50%;
+    max-width: 60rem;
+    background: var(--light-gray);
+    top: 20rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 12;
+    padding-bottom: 2rem;
+    padding-top: 0 !important;
+    border-radius: 2rem;
+    border: .3rem solid var(--habib-purple);
+    overflow: hidden;
+    animation: modelSlideIn 200ms ease-in-out;
+}
+
+@keyframes modelSlideIn {
+    0%{
+        left: -100%;
+        opacity: 0;
+    }
+    100%{
+        left: 50%;
+        opacity: 1;
+    }
+}
+
+@keyframes modelSlideOut {
+    0%{
+        left: 50%;
+        opacity: 1;
+    }
+    100%{
+        left: 200%;
+        opacity: 0;
+    }
+}
+
+.downloadReportModal_header {
+    width: 100%;
+    position: relative;
+    background: var(--habib-purple);
+    color: white;
+}
+.downloadReportModal_header h2{
+    color: white;
+    padding: 1.5rem 1rem 1rem 1rem;
+}
+
+.closeModalIcon {
+    position: absolute;
+    display: block;
+
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.5rem;
+    background: var(--light-gray);
+    cursor: pointer;
+    border-radius: 50%;
+    text-align: center;
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+
+}
+
+.closeModalIcon:hover{
+    background: white;
+}
+
+.downloadReportModal_body{
+    padding: 3rem;
+}
+
+.float_side_download_button{
+    float: right;
+    margin-right: 2rem;
+    background: white;
+    border-radius: 1rem !important;
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+
+.downloadReportModal_Checks{
+    margin: 1rem 0;
+    
+}
+
+.downloadReportModal_Checks span{
+    margin-left: 1rem;
+    font-size: 1.5rem;
+}
+
+.downloadReportModal_CheckEmpty{
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: white;
+    border: .2rem solid var(--habib-purple);
+    border-radius: .5rem;
+    text-align: center;
+}
+.downloadReportModal_CheckFilled i, .downloadReportModal_CheckEmpty i{
+    color: white;
+    font-size: 1.5rem;
+}
+
+.downloadReportModal_CheckFilled{
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: var(--habib-purple);
+    border: .2rem solid var(--habib-purple);
+    border-radius: .5rem;
+    text-align: center;
+}
+
+/* Report Generation Page */
+
+.GenerateReportsHeading{
+    font-size: 4rem;
+    color: var(--habib-purple);
+    margin: 1rem 0;
+}
+
+.GenerateReportsButton{
+    width: 100%;
+    text-align: right;
+    padding: 0 5rem 0 0;
+}
+.GenerateReportsButton button{
+    outline: none;
+    background: var(--light-gray);
+    color: black;
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    font-weight: bolder;
+    transition: 200ms linear all;
+}
+
+.GenerateReportsButton i{
+    color: black;
+    font-size: 1.7rem;
+    font-weight: bolder;
+    display: inline-block;
+    margin-left: 1rem;
+    transition: 200ms linear all;
+
+}
+.GenerateReportsButton button:hover{
+    background: var(--habib-purple);
+    color: white;
+    cursor: pointer;
+}
+.GenerateReportsButton button:hover i{
+    color: white;
+}
+
+.GenerateReportsContent{
+    padding: 2rem 4rem;
+    /* background: red; */
+}
+
+/* Generate Reports - Choose Instructors */
+.GenerateReportsChooseInstructors h2{
+    font-size: 2.3rem;
+    border-bottom: var(--habib-purple) .3rem solid;
+    margin: 2rem 0;
+}
+
+.ChooseInstructorsDepartment, .ChooseInstructorsInstructor{
+    display: none;
+}
+
+@keyframes rotateOpenTriangle{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(90deg);
+    }
+    
+}
+@keyframes rotateCloseTriangle{
+    0%{
+        transform: rotate(90deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+    
+}
+
+.GenerateReportsTriangleOpen{
+    transition: 200ms linear all;
+    animation: rotateOpenTriangle 100ms ease-in-out forwards;
+    display: none;
+    color: var(--habib-purple);
+    margin-right: 1rem;
+    cursor: pointer;
+
+
+}
+.GenerateReportsTriangleClose{
+    transition: 200ms linear all;
+    animation: rotateCloseTriangle 100ms ease-in-out forwards;
+    color: var(--habib-purple);
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+/* Tree for insturctors list */
+.ChooseInstructorsSchoolContainer{
+    font-size: 1.5rem;
+    padding: .5rem 3rem;
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+}
+
+.ChooseInstructorsDepartment{
+    margin: 1rem 0;
+    margin-left: 3rem;
+
+}
+
+.ChooseInstructorsInstructor{
+    margin-left: 6rem;
+    margin-bottom: 1rem;
+}
+
+.ChooseInstructorsInstructorName{
+    margin-left: 1rem;
+}
+
+/* Generate Reports - Print Settings */
+.GenerateReportsPrintSettings{
+    margin: 2rem 0;
+}
+.GenerateReportsPrintSettingsWrapper{
+    padding: 0 3rem;
+}
+
+.GenerateReportsPrintSettingsTab{
+    /* margin: 2rem; */
+    font-size: 1.6rem;
+    margin: 1rem 0;
+    
+}
+
+.GenerateReportsPrintSettingsTab span{
+    margin-right: 1rem;
+}
+.GenerateReportsPrintSettingsSubTabs{
+    margin: 1rem 0rem 1rem 4rem;
+    display: inline-block;
+}
+
+.GenerateReportsPrintSettingsSubTabs label{
+    width: 40rem;
+    display: inline-block;
+    margin: 1rem 2rem;
+}

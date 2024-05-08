@@ -11,7 +11,7 @@ export const ProfileInformation = () => {
   useEffect(() => {
     const fetchInstructorProfileInformation = async () => {
       const response = await fetch(
-        `http://localhost:7075/api/admin/GetAdminInfo/${id}`
+        `${import.meta.env.VITE_API_URL}/api/admin/GetAdminInfo/${id}`
       );
       if (!response.ok) {
         return alert("Error fetching instructor profile information!");
@@ -46,7 +46,7 @@ export const ProfileInformation = () => {
               const formData = new FormData();
               formData.append("profileImage", file);
               const response = await fetch(
-                `http://localhost:7075/api/media/upload/${id}`,
+                `${import.meta.env.VITE_API_URL}/api/media/upload/${id}`,
                 {
                   method: "POST",
                   body: formData,

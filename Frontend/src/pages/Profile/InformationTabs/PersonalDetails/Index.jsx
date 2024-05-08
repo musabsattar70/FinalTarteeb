@@ -40,7 +40,7 @@ export const PersonalDetails = () => {
         });
 
         const response = await fetch(
-            `http://localhost:7075/api/admin/UpdateAdminInfo/`,
+            `${import.meta.env.VITE_API_URL}/api/admin/UpdateAdminInfo/`,
             {
                 method: "PUT",
                 headers: {
@@ -76,7 +76,7 @@ export const PersonalDetails = () => {
     useEffect(() => {
         const fetchInstructorProfileInformation = async () => {
             const response = await fetch(
-                `http://localhost:7075/api/admin/GetAdminInfo/${id}`
+                `${import.meta.env.VITE_API_URL}/api/admin/GetAdminInfo/${id}`
             );
             if (!response.ok) {
                 return alert("Error fetching instructor profile information!");
